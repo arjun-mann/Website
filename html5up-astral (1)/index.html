@@ -50,10 +50,10 @@
 								<p>
 									Hi, I'm Arjun Mann and welcome to my website! I was born in Bellevue, Washington and graduated from Redmond 
 									High School in 2023. I'm double majoring in both Computer Science and Business Information Management Systems at UC Irvine.
-									Over the past few years I've gained a lot of exposure to full stack development, and am currently specializing in Artificial
-									Intelligence Systems. I have a strong passion for programming, problem solving, and optimizing my life.<br><br>
+									Over the past few years I've built websites, games, and am currently specializing in Artificial
+									Intelligence Systems. I have a strong passion for programming, problem solving, and helping others.<br><br>
 
-									When I get chronic brain fog, I like to relax by reading books. My go-to genres are programming related or about human psychology. My all time favorite is a tie
+									I like reading. My go to genre is programming. My all time favorite is a tie
 									between "Amusing Ourselves to Death" by Neil Postman, and "Algorithms to Live By" by Brian Christian. I've recently been on a hot streak of Brian Kernighan books. 
 									Other hobbies I have include playing golf with my parents, hosting board game nights, and listening to Lex Fridman podcasts.
 
@@ -108,10 +108,11 @@
 							
 								<!-- Experience 1 -->
 								<section>
-								<h3>Lumber • Junior Software Engineer <span class="small">(Jun 2025 – present)</span></h3>
+								<h3>Metric Analytics • Software Engineer Intern <span class="small">(Jun 2025 – present)</span></h3>
 								<p>
-									Building internal developer-experience tools with Python, Node, and React.
-									Shipped a CI/CD metrics dashboard that cut pipeline failures by 23 %.
+									• Developed an in-house standard RAG (Retrieval Augmented Generation) model for scoring AI generated image content using HuggingFace transformers, replacing expensive API calls and cutting inference spend by about 60%.
+• Reduced average model response time from 7 to 4 seconds through query parallelization, improving data security and increasing videos scored per shift by about 30%. 
+• Ran controlled environment experiments to understand tradeoffs across 10+ parameters (ex: temperature, top-p, model sizes, etc.), establishing baseline metrics for the new model I created.
 								</p>
 								</section>
 							
@@ -119,10 +120,11 @@
 							
 								<!-- Experience 2 -->
 								<section>
-								<h3>Google STEP Intern <span class="small">(Summer 2024)</span></h3>
+								<h3>Lumber • Software Engineer Intern <span class="small">(Summer 2024)</span></h3>
 								<p>
-									Designed and implemented a lint-as-you-type plugin for Google Docs
-									(Go + TypeScript) that now runs on 30 k+ internal documents per day.
+									• Developed a scraping application to streamline 300+ projects for an LLM, using Selenium to automatically log and return JSON data for account information, fully automating a manual process. 
+• Generated timesheet data for 1000+ employees for a CRM, using Playwright and Beautiful Soup to convert internal data (i.e. time, employee information) into a universal CSV format.
+• Cut customer onboarding costs (2 hrs of labor per customer) by building an automated pipeline that scrapes PDFs (PyMuPDF, Tabula API) for payroll information and loads the results into folders using Google Drive API.
 								</p>
 								</section>
 							
@@ -130,10 +132,19 @@
 							
 								<!-- Experience 3 -->
 								<section>
-								<h3>Teaching Assistant • UCI CS 112 <span class="small">(Jan – Jun 2024)</span></h3>
+								<h3>ICSSC Events Committee Member <span class="small">(Jan – Jun 2024)</span></h3>
 								<p>
-									Led weekly lab sessions on data structures, wrote autograder test suites,
-									and held office hours for ~120 students.
+									• Helped organize IrvineHacks 2025 by coordinating a workshop to engage 400 participants.
+     • Facilitated panels with Computer Science faculty and alumni to connect 40+ attendees.
+     • Hosted MongoDB workshops with a team of 4 during IrvineHacks, improving participants’ data management skills.
+								</p>
+								</section>
+
+								<!-- Experience 3 -->
+								<section>
+								<h3>3x Hackathon Mentor <span class="small">(Jan – Jun 2024)</span></h3>
+								<p>
+									Mentored at ZotHacks 2024, Soar Datathon 2024, and VenusHacks 2025
 								</p>
 								</section>
 							
@@ -153,8 +164,7 @@
 									<img src="images/project-01.jpg" alt="Screenshot of Smart Garden Monitor">
 									</a>
 									<p>
-									IoT soil-moisture tracker with a Flask API and React dashboard.  
-									It notifies you when plants need water and lets you chart sensor data over time.
+										I’m proud of Goober, a hobby search engine I built with a team of four and now host on Vercel. We wrote an offline Python pipeline that crawls and fingerprint‑hashes content with SimHash to de‑duplicate 40 k+ public‑domain documents, then stores dense vector representations of documents in a index for sub 300  ms vector search.  Queries hit an API that fuses the vector scores with a ranker algorithm and returns results through a stylized React front end.  I learned a lot from my peers, who were all a year above me and taught me collaboration and development practices. Designing incremental reindexing and cache functions was my first taste of real‑world retrieval at scale, and the lessons, especially proximity vectorization, fed directly into the RAG pipeline I later shipped at Metric Analytics. 
 									</p>
 								</section>
 								
@@ -167,8 +177,9 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-									A campus-centric study-group matcher built with Next.js, MongoDB, and Tailwind.
-									More than 500 students have already found partners through the beta.
+										• Built a full-stack movie-catalog website from scratch that displays a catalog of 1000s of movies for purchase. 
+										• Backend: Setup AWS EC2 instances + TomCat servers and imported a large database (50k rows) of movie data (MySQL). Implemented secure login using SHA256 hashing, cart-checkout backed by sessions, full-text search and auto-complete backed by a cache, bot detection using reCAPTCHA, a large ETL pipeline to parse large XML files, etc.
+								  		• Frontend: Implemented with JavaScript, jQuery, and Ajax.
 									</p>
 								</section>
 
@@ -180,8 +191,9 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-									A campus-centric study-group matcher built with Next.js, MongoDB, and Tailwind.
-									More than 500 students have already found partners through the beta.
+										• Mentored and led a team of four novice hackers by teaching them how to create a web application
+										• Collaborated and created a song recommendation site with access to over 100 million songs using Rapid API
+										• Developed the application in 48 hours using Vite with React for the front end, and a Flask (python) backend
 									</p>
 								</section>
 
@@ -193,8 +205,9 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-									A campus-centric study-group matcher built with Next.js, MongoDB, and Tailwind.
-									More than 500 students have already found partners through the beta.
+										• Created an interactive app to translate uploadable manga and foreign text
+										• Integrated the Gemini Deverlper API in a flask backend to improve speed and accuracy
+										• Tokenizes sentences to provide highlightable word or phrase translations
 									</p>
 								</section>
 
@@ -206,8 +219,9 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-									A campus-centric study-group matcher built with Next.js, MongoDB, and Tailwind.
-									More than 500 students have already found partners through the beta.
+										• Received “Fastest Game” award at VDGC Winter 2024 by creating a Mario-Kart style racing game in Unity
+										• Implemented the driving, collision effects, and powerups by creating their physics mechanics through C# scripting
+										• Collaborated with programmers, artists, voice actors, and game testers through weekly meetings
 									</p>
 								</section>
 
@@ -219,8 +233,9 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-									A campus-centric study-group matcher built with Next.js, MongoDB, and Tailwind.
-									More than 500 students have already found partners through the beta.
+										• Developed a quiz application recommending 10 random movies based on the respondent’s preferences
+										• Utilized a movie database API for recommendation analytics using Node.js, JavaScript, HTML, Git, and React
+										• Collaborated with three other programmers using Node.js, JavaScript, HTML, Git, and React
 									</p>
 								</section>
 							
