@@ -211,37 +211,75 @@
 
 })(jQuery);
 
-/* ========= Simple carousel (no library) ========================= */
+// /* ========= Simple carousel (no library) ========================= */
+// document.addEventListener('DOMContentLoaded', () => {
+// 	const slides   = document.querySelectorAll('.carousel .slide');
+// 	if (!slides.length) return;           // bail if no carousel on page
+
+// 	const prevBtn  = document.querySelector('.carousel .prev');
+// 	const nextBtn  = document.querySelector('.carousel .next');
+// 	const dotsBox  = document.querySelector('.carousel .dots');
+// 	let   index    = 0;
+
+// 	// build dots
+// 	slides.forEach((_, i) => {
+// 		const dot = document.createElement('button');
+// 		dot.addEventListener('click', () => goTo(i));
+// 		dotsBox.appendChild(dot);
+// 	});
+
+// 	function show(n){
+// 		slides.forEach((s,i)=>s.classList.toggle('active', i===n));
+// 		dotsBox.querySelectorAll('button')
+// 				.forEach((d,i)=>d.classList.toggle('active', i===n));
+// 	}
+// 	function goTo(n){
+// 		index = (n + slides.length) % slides.length; // wrap
+// 		show(index);
+// 	}
+
+// 	prevBtn.addEventListener('click', () => goTo(index - 1));
+// 	nextBtn.addEventListener('click', () => goTo(index + 1));
+
+// 	show(index);   // initial render
+// });
+//   /* ========= /Simple carousel ===================================== */
+
+/* ========= Multi-carousel version =============================== */
 document.addEventListener('DOMContentLoaded', () => {
-	const slides   = document.querySelectorAll('.carousel .slide');
-	if (!slides.length) return;           // bail if no carousel on page
+	document.querySelectorAll('.carousel').forEach(setupCarousel);
+});
 
-	const prevBtn  = document.querySelector('.carousel .prev');
-	const nextBtn  = document.querySelector('.carousel .next');
-	const dotsBox  = document.querySelector('.carousel .dots');
-	let   index    = 0;
+function setupCarousel(carousel){
+	const slides  = carousel.querySelectorAll('.slide');
+	if (!slides.length) return;
 
-	// build dots
+	const prevBtn = carousel.querySelector('.prev');
+	const nextBtn = carousel.querySelector('.next');
+	const dotsBox = carousel.querySelector('.dots');
+	let   index   = 0;
+
+	/* build a dot for each slide */
 	slides.forEach((_, i) => {
-		const dot = document.createElement('button');
-		dot.addEventListener('click', () => goTo(i));
-		dotsBox.appendChild(dot);
+	const dot = document.createElement('button');
+	dot.addEventListener('click', () => goTo(i));
+	dotsBox.appendChild(dot);
 	});
 
 	function show(n){
-		slides.forEach((s,i)=>s.classList.toggle('active', i===n));
-		dotsBox.querySelectorAll('button')
-				.forEach((d,i)=>d.classList.toggle('active', i===n));
+	slides.forEach((s,i)=>s.classList.toggle('active', i===n));
+	dotsBox.querySelectorAll('button')
+			.forEach((d,i)=>d.classList.toggle('active', i===n));
 	}
 	function goTo(n){
-		index = (n + slides.length) % slides.length; // wrap
-		show(index);
+	index = (n + slides.length) % slides.length;   // wrap-around
+	show(index);
 	}
 
-	prevBtn.addEventListener('click', () => goTo(index - 1));
-	nextBtn.addEventListener('click', () => goTo(index + 1));
+	prevBtn?.addEventListener('click', () => goTo(index - 1));
+	nextBtn?.addEventListener('click', () => goTo(index + 1));
 
-	show(index);   // initial render
-});
-  /* ========= /Simple carousel ===================================== */
+	show(index);   // paint initial state
+}
+/* ========= /Multi-carousel ====================================== */
   
