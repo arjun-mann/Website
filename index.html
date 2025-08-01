@@ -33,8 +33,8 @@
 							<article id="home" class="panel intro">
 								<header>
 									<h1>Arjun Mann</h1>
-									<p>Junior Software Engineer @ Lumber</p>
-									<p>Comp Sci @ University of California Irvine</p>
+									<p>Software Engineer Intern @ Metric Analytics | Lumber</p>
+									<p>Comp Sci @ UC Irvine</p>
 								</header>
 								<a href="#about" class="jumplink pic">
 									<span class="arrow icon solid fa-chevron-right"><span>About me</span></span>
@@ -110,9 +110,11 @@
 								<section>
 								<h3>Metric Analytics • Software Engineer Intern <span class="small">(Jun 2025 – present)</span></h3>
 								<p>
-									• Developed an in-house standard RAG (Retrieval Augmented Generation) model for scoring AI generated image content using HuggingFace transformers, replacing expensive API calls and cutting inference spend by about 60%.
-• Reduced average model response time from 7 to 4 seconds through query parallelization, improving data security and increasing videos scored per shift by about 30%. 
-• Ran controlled environment experiments to understand tradeoffs across 10+ parameters (ex: temperature, top-p, model sizes, etc.), establishing baseline metrics for the new model I created.
+									<ul>
+										<li>Developed an in-house standard RAG (Retrieval Augmented Generation) model for scoring AI generated image content using HuggingFace transformers, replacing expensive API calls and cutting inference spend by about 60%.</li>
+										<li>Reduced average model response time from 7 to 4 seconds through query parallelization, improving data security and increasing videos scored per shift by about 30%.</li>
+										<li>Ran controlled environment experiments to understand tradeoffs across 10+ parameters (ex: temperature, top-p, model sizes, etc.), establishing baseline metrics for the new model I created.</li>
+									</ul>
 								</p>
 								</section>
 							
@@ -122,9 +124,11 @@
 								<section>
 								<h3>Lumber • Software Engineer Intern <span class="small">(Summer 2024)</span></h3>
 								<p>
-									• Developed a scraping application to streamline 300+ projects for an LLM, using Selenium to automatically log and return JSON data for account information, fully automating a manual process. 
-• Generated timesheet data for 1000+ employees for a CRM, using Playwright and Beautiful Soup to convert internal data (i.e. time, employee information) into a universal CSV format.
-• Cut customer onboarding costs (2 hrs of labor per customer) by building an automated pipeline that scrapes PDFs (PyMuPDF, Tabula API) for payroll information and loads the results into folders using Google Drive API.
+									<ul>
+										<li>Developed a scraping application to streamline 300+ projects for an LLM, using Selenium to automatically log and return JSON data for account information, fully automating a manual process.</li>
+										<li>Generated timesheet data for 1000+ employees for a CRM, using Playwright and Beautiful Soup to convert internal data (i.e. time, employee information) into a universal CSV format.</li>
+										<li>Cut customer onboarding costs (2 hrs of labor per customer) by building an automated pipeline that scrapes PDFs (PyMuPDF, Tabula API) for payroll information and loads the results into folders using Google Drive API.</li>
+									</ul>
 								</p>
 								</section>
 							
@@ -134,9 +138,11 @@
 								<section>
 								<h3>ICSSC Events Committee Member <span class="small">(Jan – Jun 2024)</span></h3>
 								<p>
-									• Helped organize IrvineHacks 2025 by coordinating a workshop to engage 400 participants.
-     • Facilitated panels with Computer Science faculty and alumni to connect 40+ attendees.
-     • Hosted MongoDB workshops with a team of 4 during IrvineHacks, improving participants’ data management skills.
+									<ul>
+										<li>Helped organize IrvineHacks 2025 by coordinating a workshop to engage 400 participants.</li>
+										<li>Facilitated panels with Computer Science faculty and alumni to connect 40+ attendees.</li>
+										<li>Hosted MongoDB workshops with a team of 4 during IrvineHacks, improving participants’ data management skills.</li>
+									</ul>
 								</p>
 								</section>
 
@@ -144,7 +150,11 @@
 								<section>
 								<h3>3x Hackathon Mentor <span class="small">(Jan – Jun 2024)</span></h3>
 								<p>
-									Mentored at ZotHacks 2024, Soar Datathon 2024, and VenusHacks 2025
+									Mentored at ZotHacks 2024, Soar Datathon 2024, and VenusHacks 2025! 
+									Mentoring is a competitive application-based process.
+									For ZotHacks 2024, I was tasked to take ownership of one team to mentor. 
+									For the other two hackathons, you go around as a mentor in the other two.
+									I do it because I love helping aspiring hackers (I too am secretly an aspiring hacker)!
 								</p>
 								</section>
 							
@@ -164,7 +174,11 @@
 									<img src="images/project-01.jpg" alt="Screenshot of Smart Garden Monitor">
 									</a>
 									<p>
-										I’m proud of Goober, a hobby search engine I built with a team of four and now host on Vercel. We wrote an offline Python pipeline that crawls and fingerprint‑hashes content with SimHash to de‑duplicate 40 k+ public‑domain documents, then stores dense vector representations of documents in a index for sub 300  ms vector search.  Queries hit an API that fuses the vector scores with a ranker algorithm and returns results through a stylized React front end.  I learned a lot from my peers, who were all a year above me and taught me collaboration and development practices. Designing incremental reindexing and cache functions was my first taste of real‑world retrieval at scale, and the lessons, especially proximity vectorization, fed directly into the RAG pipeline I later shipped at Metric Analytics. 
+										Goober is a web search engine I collaborated on with 4 others. We got it to handle tens of thousands of pages 
+										while maintaining a query response time under 300ms! We tokenized both queries and documents with snowball 
+										stemming, and used an inverted index with tf-idf scoring to rank and display the top results. This was my 
+										first time working with a scaled dataset! To accommodate 40k+ files, we used pre processing and map reduce 
+										techniques to prevent overloading RAM. 
 									</p>
 								</section>
 								
@@ -177,9 +191,10 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-										• Built a full-stack movie-catalog website from scratch that displays a catalog of 1000s of movies for purchase. 
-										• Backend: Setup AWS EC2 instances + TomCat servers and imported a large database (50k rows) of movie data (MySQL). Implemented secure login using SHA256 hashing, cart-checkout backed by sessions, full-text search and auto-complete backed by a cache, bot detection using reCAPTCHA, a large ETL pipeline to parse large XML files, etc.
-								  		• Frontend: Implemented with JavaScript, jQuery, and Ajax.
+										Fablix is one of my most ambitious web apps yet! I made it with one partner in crime, my roommate. It's a movie catalogue
+										site with features like advanced browsing, cart checkout backed by sessions, full-text search with autocomplete, bot checks with reCAPTCHA,
+										and more! It uses MySQL connection pooling. We also experimented with containerization by creating a docker file and
+										running it in on Kubernetes clusters (1 admin and 2 worker t2.micros).
 									</p>
 								</section>
 
@@ -191,12 +206,13 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-										• Mentored and led a team of four novice hackers by teaching them how to create a web application
-										• Collaborated and created a song recommendation site with access to over 100 million songs using Rapid API
-										• Developed the application in 48 hours using Vite with React for the front end, and a Flask (python) backend
+										At Zothacks 2024, I mentored a group of four novice CS students 
+										and showed them how to build a web app from scratch. I taught them Flask, React with Vite tooling, and git. I also
+										divided them into teams, debugged their code, and gave them more advice than they probably wanted about coding web apps.
+										Together we built a song recommendation site in 48 hours that calls Rapid API in a Flask backend to pick from 100 million songs
+										based on a playlist the user creates using search.
 									</p>
 								</section>
-
 								<hr>
 
 								<section>
@@ -205,9 +221,11 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-										• Created an interactive app to translate uploadable manga and foreign text
-										• Integrated the Gemini Deverlper API in a flask backend to improve speed and accuracy
-										• Tokenizes sentences to provide highlightable word or phrase translations
+										<ul>
+											<li>Created an interactive app to translate uploadable manga and foreign text.</li>
+											<li>Integrated the Gemini Developer API with prompt engineering in a Flask backend to improve speed and accuracy.</li>
+											<li>Tokenizes sentences to provide highlightable word or phrase translations.</li>
+										  </ul>
 									</p>
 								</section>
 
@@ -219,9 +237,11 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-										• Received “Fastest Game” award at VDGC Winter 2024 by creating a Mario-Kart style racing game in Unity
-										• Implemented the driving, collision effects, and powerups by creating their physics mechanics through C# scripting
-										• Collaborated with programmers, artists, voice actors, and game testers through weekly meetings
+										<ul>
+											<li>Received “Fastest Game” award at VDGC Winter 2024 by creating a Mario-Kart style racing game in Unity</li>
+											<li>Implemented the driving, collision effects, and powerups by creating their physics mechanics through C# scripting</li>
+											<li>Collaborated with programmers, artists, voice actors, and game testers through weekly meetings</li>
+										  </ul>
 									</p>
 								</section>
 
@@ -233,9 +253,11 @@
 									<img src="images/project-02.jpg" alt="Screenshot of UCI Study Buddy">
 									</a>
 									<p>
-										• Developed a quiz application recommending 10 random movies based on the respondent’s preferences
-										• Utilized a movie database API for recommendation analytics using Node.js, JavaScript, HTML, Git, and React
-										• Collaborated with three other programmers using Node.js, JavaScript, HTML, Git, and React
+										<ul>
+											<li>Developed a quiz application recommending 10 random movies based on the respondent’s preferences</li>
+											<li>Utilized a movie database API for recommendation analytics using Node.js, JavaScript, HTML, Git, and React</li>
+											<li>Collaborated with three other programmers using Node.js, JavaScript, HTML, Git, and React</li>
+										</ul>
 									</p>
 								</section>
 							
