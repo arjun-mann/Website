@@ -210,3 +210,38 @@
 		}
 
 })(jQuery);
+
+/* ========= Simple carousel (no library) ========================= */
+document.addEventListener('DOMContentLoaded', () => {
+	const slides   = document.querySelectorAll('.carousel .slide');
+	if (!slides.length) return;           // bail if no carousel on page
+
+	const prevBtn  = document.querySelector('.carousel .prev');
+	const nextBtn  = document.querySelector('.carousel .next');
+	const dotsBox  = document.querySelector('.carousel .dots');
+	let   index    = 0;
+
+	// build dots
+	slides.forEach((_, i) => {
+		const dot = document.createElement('button');
+		dot.addEventListener('click', () => goTo(i));
+		dotsBox.appendChild(dot);
+	});
+
+	function show(n){
+		slides.forEach((s,i)=>s.classList.toggle('active', i===n));
+		dotsBox.querySelectorAll('button')
+				.forEach((d,i)=>d.classList.toggle('active', i===n));
+	}
+	function goTo(n){
+		index = (n + slides.length) % slides.length; // wrap
+		show(index);
+	}
+
+	prevBtn.addEventListener('click', () => goTo(index - 1));
+	nextBtn.addEventListener('click', () => goTo(index + 1));
+
+	show(index);   // initial render
+});
+  /* ========= /Simple carousel ===================================== */
+  

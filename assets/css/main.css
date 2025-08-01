@@ -2189,3 +2189,91 @@ input, select, textarea {
 			}
 
 		}
+
+		/* ===== Carousel (custom) ======================================== */
+		.carousel{
+			position:relative;
+			max-width:500px;          /* adjust width as you like */
+			margin:2rem auto;         /* center inside panel */
+			overflow:hidden;
+			border-radius:8px;
+		}
+		
+		.slide{display:none;margin:0;}
+		.slide.active{display:block;}
+		
+		.slide img{width:100%;display:block;}
+		
+		.slide figcaption{
+			text-align:center;
+			font-style:italic;
+			padding:.6rem 0 1.2rem;
+			background:#fff;
+		}
+		
+		.arrow{
+			position:absolute;
+			top:50%;transform:translateY(-50%);
+			width:44px;height:44px;
+			border:none;border-radius:50%;
+			font-size:2rem;line-height:1;
+			background:rgba(0,0,0,.45);color:#fff;
+			cursor:pointer;
+		}
+		.arrow:hover{background:rgba(0,0,0,.65);}
+		.prev{left:12px;} .next{right:12px;}
+		
+		.dots{
+			display:flex;justify-content:center;gap:.5rem;
+			background:#fff;padding-bottom:1rem;
+		}
+		.dots button{
+			width:10px;height:10px;border-radius:50%;
+			border:none;background:#ccc;cursor:pointer;
+		}
+		.dots button.active,
+		.dots button:hover{background:#555;}
+		/* ===== /Carousel ================================================= */
+
+		/* === Carousel arrow fix ======================================== */
+		.carousel .arrow{
+			/* 1 – kill inherited padding so width == height */
+			padding: 0;
+		
+			/* 2 – explicit square so 50 % border-radius forms a circle */
+			width: 44px;
+			height: 44px;
+		
+			/* 3 – use flexbox to centre the ‹ or › glyph */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		/* =============================================================== */
+
+		/* === 1. pagination dots: true circles ========================= */
+		.carousel .dots button{
+			/* kill inherited padding that was stretching them */
+			padding: 0;
+		
+			/* equal sides + full radius → perfect circle */
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+		
+			/* makes the baseline quirk disappear in some browsers */
+			display: inline-block;
+		}
+		
+		/* === 2. arrows: vertical fine-tune ============================ */
+		/* The caption adds ~1 rem under the image, so 50 % of the whole
+			box is a bit low.  Nudge the buttons up by half the caption size. */
+		.carousel .arrow{
+			top: calc(50% - 2.5rem);      /* adjust this value if your caption gets taller */
+			transform: translateY(-50%);/* keep true centre behaviour           */
+		}
+		/* ============================================================== */
+  
+  
+  
+		
