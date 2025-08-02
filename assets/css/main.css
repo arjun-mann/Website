@@ -2249,7 +2249,6 @@ input, select, textarea {
 			align-items: center;
 			justify-content: center;
 		}
-		/* =============================================================== */
 
 		/* === 1. pagination dots: true circles ========================= */
 		.carousel .dots button{
@@ -2272,7 +2271,43 @@ input, select, textarea {
 			top: calc(50% - 2.5rem);      /* adjust this value if your caption gets taller */
 			transform: translateY(-50%);/* keep true centre behaviour           */
 		}
-		/* ============================================================== */
+
+		h3 + hr{
+			margin-top: 0;        /* no gap above */
+			margin-bottom: 1rem;  /* keep normal spacing below */
+		}
+
+		section > h3{            /* the heading */
+			margin-bottom: 0.25rem;/* shrink gap below the title          */
+		}
+
+		section > hr{
+			margin: 0;             /* no extra space above or below the line */
+		}
+
+		/* === Social-icon colour override ================================= */
+
+		.social .icon{
+			color: #888;               /* base grey */
+			transition: color .2s;     /* smooth fade */
+		}
+		
+		.social .icon:hover{
+			color: #555;               /* darker grey on hover */
+		}
+
+		/* === Social-icon size & spacing ================================= */
+		.social .icon{
+			font-size: 2.5rem;   /* ← grow the glyphs (1 rem ≈ 16 px) */
+			margin-right: 0.4rem;/* ← “inline space” after each icon  */
+			color: #888;
+			transition: color .2s;
+		}
+		
+		.social .icon:last-child{ margin-right: 0; } /* no extra space on the last one */
+		
+		.social .icon:hover{ color:#555; }
+  
   
   
   
