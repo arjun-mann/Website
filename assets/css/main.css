@@ -2307,6 +2307,33 @@ input, select, textarea {
 		.social .icon:last-child{ margin-right: 0; } /* no extra space on the last one */
 		
 		.social .icon:hover{ color:#555; }
+
+		/*new*/
+
+		.exp-head{
+			display: flex;                 /* put title and date on one row   */
+			justify-content: space-between;/* push them to opposite ends       */
+			align-items: baseline;         /* keep text baselines aligned      */
+			margin: 0 0 .25rem;            /* tighten gap above the <hr>       */
+		}
+		  
+		.exp-head .dates{
+			font-size: .9em;               /* make date slightly smaller       */
+			color: #888;                   /* subtle grey                      */
+		}
+		
+		a.no-underline{
+			color: #e67e22;          /* orange; pick any hex/RGB */
+			text-decoration: none;   /* removes the default underline */
+		}
+
+		  /* keep a visual cue on hover/focus */
+		a.no-underline:hover,
+		a.no-underline:focus{
+		text-decoration: underline;   /* or change color, add shadow, etc. */
+		}
+
+		
   
   
   
